@@ -8,7 +8,7 @@ const daysEl = rootSelector.querySelector('span[data-days]');
 const hoursEl = rootSelector.querySelector('span[data-hours]');
 const minutesEl = rootSelector.querySelector('span[data-minutes]');
 const secondsEl = rootSelector.querySelector('span[data-seconds]');
-console.log(daysEl);
+
 buttonStart.disabled = true;
 
 let selectedData = null;
