@@ -13,7 +13,7 @@ buttonStart.disabled = true;
 
 let selectedData = null;
 let intervalId = null;
-let diff = null;
+
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -32,19 +32,16 @@ const options = {
   },
 };
 flatpickr('input#datetime-picker', options);
-console.log(selectedData);
 
 buttonStart.addEventListener('click', onStartBtnClick);
 function onStartBtnClick() {
-  console.log(selectedData);
-
   buttonStart.disabled = true;
   intervalId = setInterval(() => {
     const diff = selectedData - Date.now();
-    console.log(diff);
+
     if (diff <= 0) {
       clearInterval(intervalId);
-      buttonStart.disabled = false;
+
       return;
     }
 
